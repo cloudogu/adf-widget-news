@@ -24,11 +24,16 @@
 
 'use strict';
 
-angular.module('adf.widget.news')
-  .filter('toDate', ToDate);
-
-function ToDate(){
-  return function(date){
+function ToDate() {
+  return function (date) {
+    if (date === '') {
+      return null;
+    }
     return new Date(date);
   };
 }
+
+angular.module('adf.widget.news')
+  .filter('toDate', ToDate);
+
+
