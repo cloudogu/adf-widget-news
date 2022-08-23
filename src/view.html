@@ -8,7 +8,7 @@
         {{vm.feed.title}}
       </a>
     </h3>
-    <p ng-if="config.showDescription">{{ vm.feed.description | parseLanguage}}</p>
+    <p ng-if="config.showDescription">{{vm.feed.description}}</p>
     <div class="media" ng-repeat="entry in vm.feed.entries">
       <div class="media-body">
         <h4 class="media-heading">
